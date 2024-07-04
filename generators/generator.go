@@ -7,7 +7,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/x1ah/gena"
+	"github.com/gr33pp/genah"
 )
 
 // Generator is interface of template generator
