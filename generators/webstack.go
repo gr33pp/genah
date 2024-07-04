@@ -173,62 +173,6 @@ function search() {
         }).text().trim();
         return thisText
     }
-    function getHotkeyword(value) {
-        $.ajax({
-            type: "GET",
-            url: "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su",
-            async: true,
-            data: {
-                wd: value
-            },
-            dataType: "jsonp",
-            jsonp: "cb",
-            success: function (res) {
-                $("#box ul").text("");
-                hotList = res.s.length;
-                if (hotList) {
-                    $("#box").css("display", "block");
-                    for (var i = 0; i < hotList; i++) {
-                        $("#box ul").append("<li><span>" + (i + 1) + "</span> " + res.s[i] + "</li>");
-                        $("#box ul li").eq(i).click(function () {
-                            var thisText = filterChildren(this);
-                            $("#txt").val(thisText);
-                            window.open(searchData.thisSearch + thisText);
-                            $("#box").css("display", "none")
-                        });
-                        if (i === 0) {
-                            $("#box ul li").eq(i).css({
-                                "border-top": "none"
-                            });
-                            $("#box ul span").eq(i).css({
-                                "color": "#fff",
-                                "background": "#f54545"
-                            })
-                        } else {
-                            if (i === 1) {
-                                $("#box ul span").eq(i).css({
-                                    "color": "#fff",
-                                    "background": "#ff8547"
-                                })
-                            } else {
-                                if (i === 2) {
-                                    $("#box ul span").eq(i).css({
-                                        "color": "#fff",
-                                        "background": "#ffac38"
-                                    })
-                                }
-                            }
-                        }
-                    }
-                } else {
-                    $("#box").css("display", "none")
-                }
-            },
-            error: function (res) {
-                console.log(res)
-            }
-        })
-    }
     $("#txt").keyup(function (e) {
         if ($(this).val()) {
             if (e.keyCode == 38 || e.keyCode == 40 || !searchData.hotStatus) {
