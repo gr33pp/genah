@@ -37,7 +37,6 @@
     {{ renderSearchEngines }}
     {{- end }}
     <script>
-    //夜间模式切换
     function switchNightMode() {
         var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
         if (night == '0') {
@@ -71,14 +70,14 @@
                 <header class="logo-env">
                     <!-- logo -->
                     <div class="logo">
-                        <a href="/" class="logo-expanded">
+                        <a href="" class="logo-expanded">
                             {{ if .Logo }}
                             <img src="{{ .Logo }}" width="100%" alt="" />
                             {{ else }}
                             <p class="overflowClip_2" style="font-size: 20px;"><strong>{{ .Title }}</strong></p>
                             {{ end}}
                         </a>
-                        <a href="/" class="logo-collapsed">
+                        <a href="" class="logo-collapsed">
                             {{ if .Logo }}
                             <img src="{{ .Logo }}" width="40" alt="" />
                             {{ else }}
