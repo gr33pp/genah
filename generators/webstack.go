@@ -46,25 +46,25 @@ func buildSearchIcon(input string) string {
 
 var availableEngines = map[string]*searchEngineInfo{
 	"google": {
-		Name:     "谷歌",
+		Name:     "Google",
 		Img:      buildSearchIcon("url('%s')  -105px 0px"),
 		Position: "-40px 0px",
 		URL:      "https://www.google.com/search?q=",
 	},
-	"baidu": {
-		Name:     "百度",
+	"duckduckgo": {
+		Name:     "DuckDuckGo",
 		Img:      buildSearchIcon("url('%s') -80px 0px"),
 		Position: "0px 0px",
-		URL:      "https://www.baidu.com/s?wd=",
+		URL:      "https://duckduckgo.com/?t=h_&q=",
 	},
 	"bing": {
-		Name:     "必应",
+		Name:     "Bing",
 		Img:      buildSearchIcon("url('%s')  -80px -25px"),
 		Position: "0px -40px",
-		URL:      "https://cn.bing.com/search?q=",
+		URL:      "https://bing.com/search?q=",
 	},
 	"sougou": {
-		Name:     "搜狗",
+		Name:     "Sougou",
 		Img:      buildSearchIcon("url('%s') -80px -50px"),
 		Position: "0px -80px",
 		URL:      "https://www.sogou.com/web?query=",
@@ -76,7 +76,7 @@ var availableEngines = map[string]*searchEngineInfo{
 		URL:      "https://s.taobao.com/search?q=",
 	},
 	"jd": {
-		Name:     "京东",
+		Name:     "JD",
 		Img:      buildSearchIcon("url('%s') -80px -75px"),
 		Position: "0px -120px",
 		URL:      "http://search.jd.com/Search?keyword=",
@@ -94,13 +94,13 @@ var availableEngines = map[string]*searchEngineInfo{
 		URL:      "https://www.zhihu.com/search?type=content&q=",
 	},
 	"weibo": {
-		Name:     "微博",
+		Name:     "Weibo",
 		Img:      buildSearchIcon("url('%s') -80px -125px"),
 		Position: "0px -200px",
 		URL:      "https://s.weibo.com/weibo/",
 	},
 	"bilibili": {
-		Name:     "B站",
+		Name:     "Bilibili",
 		Img:      buildSearchIcon("url('%s') -105px -125px"),
 		Position: "-40px -200px",
 		URL:      "http://search.bilibili.com/all?keyword=",
