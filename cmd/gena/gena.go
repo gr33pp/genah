@@ -5,8 +5,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/x1ah/gena"
-	"github.com/x1ah/gena/generators"
+	"github.com/gr33pp/genah"
+	"github.com/gr33pp/genah/generators"
 )
 
 func main() {
