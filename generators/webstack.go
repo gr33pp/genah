@@ -41,7 +41,7 @@ type searchEngineInfo struct {
 }
 
 func buildSearchIcon(input string) string {
-	return fmt.Sprintf(input, "https://imgur.com/GlJYRUc.png")
+	return fmt.Sprintf(input, "https://i.imgur.com/GlJYRUc.png")
 }
 
 var availableEngines = map[string]*searchEngineInfo{
